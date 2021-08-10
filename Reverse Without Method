@@ -1,0 +1,13 @@
+Given a string of characters as input, write a function that returns it with the characters reversed.
+
+function reverse(arr){
+  let reverseArr = []
+  for(let i = arr.length; i >= 0 ; i--){
+  reverseArr.push(arr.split('')[i])
+}
+  return reverseArr.join('')
+}
+
+console.log(reverse('Hello World'))
+
+O(n) using one loop, with push as a constant.
