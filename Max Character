@@ -1,0 +1,29 @@
+Given a string of characters, return the character that appears the most often.
+Example:
+
+describe("Max Character", () => {
+ it("Should return max character", () => {
+  assert.equal(max("Hello World!"), "l");
+ });
+});
+
+##Answer:
+
+function mostChar(arr){
+
+let answer = []
+    for( let i = 0 ; i < arr.length ; i++){
+
+    answer.push(arr[i] === arr[i+1] ? arr[i] : '')
+
+    }
+    if (answer.length === 2){
+      return console.log(answer[0])
+    }else{
+      mostChar(answer.join(''))
+    }    
+}
+
+console.log(mostChar("helllo World"))
+
+
