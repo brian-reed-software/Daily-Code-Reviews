@@ -1,0 +1,28 @@
+Given a string of words or phrases, count the number of vowels.
+
+describe("Vowels", () => {
+ it("Should count vowels", () => {
+  assert.equal(vowels("hello world"), 3);
+ });
+});
+
+
+##Solution:
+
+function findVowels(arr){
+
+let vowel = ["a","e","i","o","u"]
+
+let count = 0 
+
+let flattenedArr = [...arr.join('').toLowerCase()]
+
+for (let i = 0 ; i < flattenedArr.length; i++){
+
+vowel.includes(flattenedArr[i]) ? count++ : ''
+
+}
+
+return count
+
+}
