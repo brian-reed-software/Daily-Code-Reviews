@@ -1,0 +1,25 @@
+function generalizedGCD(num, arr){
+    //keywords:
+    //greatest common divisor
+    //highest common factor
+    //largest positive Int
+    //divides all # w/o giving remainder
+    //LARGEST positive int that divides w/o remainder
+
+    let val = []
+    let count = 0
+    
+    for(let z = 0; z < arr.length ; z ++){
+          
+      do{
+        arr[z] % count === 0 ? val.push(z) : ''
+        count++
+      }
+      while (val.length === arr.length) 
+
+    }
+    return val[val.length-1]
+}
+// FUNCTION SIGNATURE ENDS
+
+console.log(generalizedGCD(0,[3,6,9,12,15]))
