@@ -1,0 +1,20 @@
+function n(states, days)
+{
+    let val = []
+    for( let i = 0 ; i < states.length ; i++){
+
+      if ((states[i-1] === 0 && states[i+1] === 0) || (states[i-1] === 0 && states[i+1] === 0)){
+    val.push(0)
+    }else{
+    val.push(1)
+    }
+    
+    // WRITE YOUR CODE HERE 
+    
+}
+val[0] = 0
+val[val.length-1] = 0
+return val
+}
+
+console.log(n([1,0,0,0,0,1,0,0]))
